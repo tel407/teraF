@@ -56,6 +56,9 @@ export default {
       selectedContract: this.filterOpt.contractTypeArr
     }
   },
+  mounted () {
+    this.chkChange()
+  },
   computed: {
     ...mapGetters('product', ['filterOpt']),
     typedStatusTotal: {

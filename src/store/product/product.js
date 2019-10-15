@@ -10,8 +10,8 @@ const product = {
     pageCurrent: 1, // 현재 page 넘버,
     pageSize: 5,
     filterOpt: { // filter 값
-      typedStatusArr: ['모집중', '대기중'],
-      contractTypeArr: ['부동산담보', '건축자금']
+      typedStatusArr: [],
+      contractTypeArr: []
     }
   },
   mutations: {
