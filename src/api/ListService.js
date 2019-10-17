@@ -370,7 +370,6 @@ const getPagePerList = (filterOpt, page, size) => {
     const contract = (contractTypeArr.length === 0) ? true : contractTypeArr.indexOf(item.contractType) > -1
     return status && contract
   })
-  console.log(list)
   // [ 모집률 , ID ] sorting
   list.sort(function (a, b) {
     var o1 = a['rateOfReturn']
