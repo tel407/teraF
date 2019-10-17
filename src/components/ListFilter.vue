@@ -90,8 +90,6 @@ export default {
         typedStatusArr: this.chkOption.selectedStatus,
         contractTypeArr: this.chkOption.selectedContract
       }
-      if (this.chkOption.selectedStatus.length === 0) storeOption.typedStatusArr = this.typedStatus
-      if (this.chkOption.selectedContract.length === 0) storeOption.contractTypeArr = this.contractType
       this.filterChageData(storeOption)
     }
   }

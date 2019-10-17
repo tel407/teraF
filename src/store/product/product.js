@@ -9,9 +9,9 @@ const product = {
     totalPageNum: 0, // 총 filter 된 page 개수
     pageCurrent: 1, // 현재 page 넘버,
     pageSize: 5,
-    filterOpt: { // filter 값
-      typedStatusArr: ['모집중', '대기중'],
-      contractTypeArr: ['부동산담보', '건축자금']
+    filterOpt: { // filter 값 (시작은 빈값으로)
+      typedStatusArr: [], // ['모집중', '대기중']
+      contractTypeArr: []// ['부동산담보', '건축자금']
     }
   },
   mutations: {

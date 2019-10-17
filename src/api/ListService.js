@@ -363,10 +363,14 @@ const getPagePerList = (filterOpt, page, size) => {
   let typedStatusArr = filterOpt.typedStatusArr
   let contractTypeArr = filterOpt.contractTypeArr
   const copyData = JSON.parse(JSON.stringify(originData))
+
   // [ 상품유형 , 상품상태 ] 조건 필터
   const list = copyData.list.filter(function (item) {
-    return (typedStatusArr.indexOf(item.typedStatus) > -1 && contractTypeArr.indexOf(item.contractType) > -1)
+    const status = (typedStatusArr.length === 0) ? true : typedStatusArr.indexOf(item.typedStatus) > -1
+    const contract = (contractTypeArr.length === 0) ? true : contractTypeArr.indexOf(item.contractType) > -1
+    return status && contract
   })
+  console.log(list)
   // [ 모집률 , ID ] sorting
   list.sort(function (a, b) {
     var o1 = a['rateOfReturn']
