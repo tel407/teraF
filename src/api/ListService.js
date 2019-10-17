@@ -363,7 +363,6 @@ const getPagePerList = (filterOpt, page, size) => {
   let typedStatusArr = filterOpt.typedStatusArr
   let contractTypeArr = filterOpt.contractTypeArr
   const copyData = JSON.parse(JSON.stringify(originData))
-
   // [ 상품유형 , 상품상태 ] 조건 필터
   const list = copyData.list.filter(function (item) {
     const status = (typedStatusArr.length === 0) ? true : typedStatusArr.indexOf(item.typedStatus) > -1
